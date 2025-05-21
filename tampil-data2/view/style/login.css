@@ -1,0 +1,78 @@
+body {
+    background: url('../img/i.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.textbox {
+    margin-bottom: 15px;
+}
+
+.textbox label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.language-switch {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.language-switch button {
+    background: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-switch button:hover {
+    background: #007bff;
+    color: white;
+}
