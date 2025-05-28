@@ -11,7 +11,7 @@ try {
 
 
 } catch (exception $e) {
-    echo "TS SO ASS 🥀💔: " . e->getMessage();
+    echo "TS SO ASS 🥀💔: " . $e->getMessage();
 }
 
 
@@ -25,7 +25,7 @@ try {
     <title>Tambah Data</title>
 </head>
 <body>
-    <form action="../models/update.php" method="post">
+    <form action="../models/m_update_nasabah.php" method="post">
 
     <?php foreach ($result as $data) :   ?>
         <label for="id"></label><br>
@@ -35,7 +35,7 @@ try {
         <input type="text" name="nama" value="<?= $data['nama_lengkap'] ?>" ><br><br>
 
         <label for="tl">Tanggal Lahir</label><br>
-        <input type="date" name="tl" value="<?= $data['tanggal_lahir'] ?> "><br><br>
+        <input type="date" name="tl" value="<?= date( "Y-F-d" , strtotime($data['tanggal_lahir'])) ?>  "><br><br>
 
         <label for="alamat">Alamat</label><br>
         <input type="text" name="alamat" value="<?= $data['alamat'] ?>"><br><br>

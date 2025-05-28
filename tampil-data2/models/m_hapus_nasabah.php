@@ -10,7 +10,7 @@ try {
     header ("location: ../view/tabel_nasabah.php");
     
 } catch (exeption $e) {
-    echo e->getMessage();
+    echo $e->getMessage();
 }
 
 ?>

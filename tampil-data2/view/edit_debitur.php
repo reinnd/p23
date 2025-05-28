@@ -6,12 +6,12 @@ $id =$_GET['id'];
 
 try {
 
-    $query = $conn->query("SELECT * FROM nasabah WHERE id_nasabah = $id");
+    $query = $conn->query("SELECT * FROM debitur WHERE id_debitur = $id");
     $result = $query-> fetch_all(MYSQLI_ASSOC);
 
 
 } catch (exception $e) {
-    echo "TS SO ASS 🥀💔: " . e->getMessage();
+    echo "TS SO ASS 🥀💔: " . $e->getMessage();
 }
 
 
@@ -25,32 +25,32 @@ try {
     <title>Tambah Data</title>
 </head>
 <body>
-    <form action="../models/update.php" method="post">
+    <form action="../models/m_update_debitur.php" method="post">
 
     <?php foreach ($result as $data) :   ?>
         <label for="id"></label><br>
         <input type="number" name="id" hidden><br>
-
-        <label for="nama">Nama</label><br>
-        <input type="text" name="nama" value="<?= $data['nama_lengkap'] ?>" ><br><br>
-
-        <label for="tl">Tanggal Lahir</label><br>
-        <input type="date" name="tl" value="<?= $data['tanggal_lahir'] ?> "><br><br>
-
-        <label for="alamat">Alamat</label><br>
-        <input type="text" name="alamat" value="<?= $data['alamat'] ?>"><br><br>
         
-        <label for="telp">No Telp</label><br>
-        <input type="text" name="telp" value="<?= $data['nomor_telepon'] ?>"><br><br>
+        <label for="id_n">nama nasabah</label><br>
+        <input type="number" name="id_n" value="<?= $data['id_nasabah'] ?>"><br>
+
+        <label for="jenpin">Jenis Pinjaman</label><br>
+        <input type="text" name="jenpin" value="<?= $data['jenis_pinjaman'] ?>"><br><br>
+
+        <label for="jumpin">Jumlah Pinjaman</label><br>
+        <input type="text" name="jumpin" value="<?= $data['jumlah_pinjaman'] ?>"><br><br>
+
+        <label for="tp">Tanggal Pengajuan</label><br>
+        <input type="date" name="tp" value="<?= $data['tanggal_pengajuan'] ?>"><br><br>
         
-        <label for="email">Email</label><br>
-        <input type="email" name="email" value="<?= $data['email'] ?>"><br><br>
+        <label for="tjt">Tanggal Jatuh Tempo</label><br>
+        <input type="date" name="tjt" value="<?= $data['tanggal_jatuh_tempo'] ?>"><br><br>
+        
+        <label for="bunga">Suku Bunga</label><br>
+        <input type="text" name="bunga" value="<?= $data['suku_bunga'] ?>"><br><br>
 
-        <label for="nid">No Identitas</label><br>
-        <input type="number" name="nid" value="<?= $data['nomor_identitas'] ?>"><br><br>
-
-        <label for="tdf">Tanggal Daftar</label><br>
-        <input type="date" name="tdf" value="<?= $data['tanggal_daftar'] ?>"><br><br>
+        <label for="status">Status pinjaman</label><br>
+        <input type="text" name="status" value="<?= $data['status_pinjaman'] ?>"><br><br>
 
         <input type="submit" value="kirim">
     <?php endforeach ?>

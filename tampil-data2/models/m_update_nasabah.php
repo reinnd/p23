@@ -13,7 +13,7 @@ include "../controllers/c_conn.php";
 
 try {
 
-    $conn->query ("UPDATE nasabah SET nama_lengkap = '$nama', tanggal_lahir = '$tanggal_lahir' , alamat = '$alamat', nomor_telepon = '$phone' , email = '$email' , nomor_identita = '$no_identitas' , tanggal_daftar = '$tanggal_daftar' WHERE id_nasabah = $id");
+    $conn->query ("UPDATE nasabah SET nama_lengkap = '$nama', tanggal_lahir = '$tanggal_lahir' , alamat = '$alamat', nomor_telepon = '$phone' , email = '$email' , nomor_identitas = '$no_identitas' , tanggal_daftar = '$tanggal_daftar' WHERE id_nasabah = $id ");
         
         header ("location: ../view/tabel_nasabah.php");
 

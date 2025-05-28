@@ -37,7 +37,7 @@ $result = $query->fetch_all(MYSQLI_ASSOC);
     </ul>
     </nav>
     <div class="tabel">
-        <a href="form.php">Tambah Data</a>
+        <a href="form_debitur.php">Tambah Data</a>
     <table>
         <thead>
             <tr>
@@ -73,7 +73,7 @@ $result = $query->fetch_all(MYSQLI_ASSOC);
                 <td><?= $data['status_pinjaman'] ?></td>
                 <td>
                     <a href="edit_debitur.php?id= <?= $data['id_debitur'] ?>" class="button-edit">edit</a>
-                    <a href="../models/m_hapus_debitur.php?id= <?= $data['id_debitur'] ?>>hapus</a>
+                    <a href="../models/m_hapus_debitur.php?id= <?= $data['id_debitur'] ?>" class="button-delete" >hapus</a>
                 </td>
             </tr>
         <?php

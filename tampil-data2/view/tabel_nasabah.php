@@ -69,7 +69,7 @@ $result = $query->fetch_all(MYSQLI_ASSOC);
             <tr>
                 <td><?= $no++ ?></td>
                 <td><?= $data['nama_lengkap'] ?></td>
-                <td><?= $data['tanggal_lahir'] ?></td>
+                <td><?= date( "d F Y" , strtotime($data['tanggal_lahir'])) ?></td>
                 <td><?= $data['alamat'] ?></td>
                 <td><?= $data['nomor_telepon'] ?></td>
                 <td><?= $data['email'] ?></td>
